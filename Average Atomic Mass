@@ -1,0 +1,26 @@
+num_elements = int(input("How many elements are in your problem? "))
+
+first_relative_abundance = float(input("What is the relative abundance of the first element: "))
+first_mass = float(input("What is the mass of the first element: "))
+second_relative_abundance = float(input("What is the relative abundance of the second element: "))
+second_mass = float(input("What is the mass of the second element: "))
+
+if num_elements == 3:
+    third_relative_abundance = float(input("What is the relative abundance of the third element: "))
+    third_mass = float(input("What is the mass of the third element: "))
+    average_mass = float(first_relative_abundance/100 * first_mass + second_relative_abundance/100 * second_mass + third_relative_abundance/100 * third_mass)
+elif num_elements == 2:
+    average_mass = float(first_relative_abundance/100 * first_mass + second_relative_abundance/100 * second_mass)
+elif num_elements == 4:
+    fourth_relative_abundance = float(input("What is the relative abundance of the fourth element: "))
+    fourth_mass = float(input("What is the mass of the fourht element: "))
+    average_mass = float(first_relative_abundance/100 * first_mass + second_relative_abundance/100 * second_mass + third_relative_abundance/100 * third_mass + fourth_relative_abundance/100 * fourth_mass)
+else:
+    print("Sorry, I do not have the answer for that.")
+
+
+if KeyboardInterrupt:
+    print("Sorry, there was an error. Please try again.")
+
+
+print(round(average_mass))
